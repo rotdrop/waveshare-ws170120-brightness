@@ -28,3 +28,13 @@ for the brightness. The other non-zero bytes at the start of the
 leftover data are always the same; perhaps some "magic fourc" or so.
 
 ## Device answer
+
+The device seemingly answers just with a standard handshake without additional data. It would be nice to be able to query the actual brightness, but this does not seem to be possible(?).
+
+```
+0000   c0 39 cc f0 c4 07 ff ff 43 01 01 03 01 00 2d 3e   .9......C.....->
+0010   67 d3 aa 65 00 00 00 00 f6 1f 0f 00 00 00 00 00   g..e............
+0020   26 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   &...............
+0030   01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+```
+
