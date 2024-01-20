@@ -37,6 +37,12 @@ git clone https://github.com/rotdrop/waveshare-ws170120-brightness.git
 pip install ./waveshare-ws170120-brightness
 ```
 
+or directly from github
+
+```
+pip install waveshare-ws170120-brightness@git+https://github.com/rotdrop/waveshare-ws170120-brightness.git
+```
+
 ### pipx
 
 This generates an isolated virtual environment and installes the bundled script `waveshare-ws170120-brightness`.
@@ -48,6 +54,12 @@ or
 ```
 git clone https://github.com/rotdrop/waveshare-ws170120-brightness.git
 pipx install ./waveshare-ws170120-brightness
+```
+
+or directly from github
+
+```
+pipx install waveshare-ws170120-brightness@git+https://github.com/rotdrop/waveshare-ws170120-brightness.git
 ```
 
 ### Manually
