@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools~=68.0", "wheel~=0.40.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name         = "waveshare-ws170120-brightness"
+version      = "1.0.0"
+license      = {text = "GPL-3.0"}
+description  = "Control the brightness of an Waveshare WS170120 touch-screen."
+readme       = "README.md"
+authors      = [
+  {name = "Claus-Justus Heine", email = "himself@claus-justus-heine.de"}
+]
+requires-python = ">=3.10.0"
+dependencies = [
+  "hidraw-pure==1.1",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/rotdrop/waveshare-ws170120-brightness"
+
+[project.scripts]
+waveshare-ws170120-brightness = "waveshare_ws170120_brightness:main"
+
+[tool.setuptools]
+platforms = ["any"]
+zip-safe  = true
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["waveshare_ws170120_brightness*"]

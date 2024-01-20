@@ -2,6 +2,7 @@
 
 from hidraw import HIDRaw
 from os import listdir
+from sys import exit
 from glob import glob
 # from hexdump import hexdump
 
@@ -69,8 +70,8 @@ class WaveshareWS170120:
     device.close()
     
     self._deviceName = deviceName
-    
-if __name__ == '__main__':
+
+def main() -> int:
   import argparse
     
   parser = argparse.ArgumentParser(
@@ -96,9 +97,11 @@ if __name__ == '__main__':
   if verbosity > 0:
     print('Attempting to set brightness to %d%%.' % brightness)
 
-  backlightController = WaveshareWS170120(verbosity)
-  backlightController.setBrightness(brightness)
+  backlightController = WaveshareWS170120(verbosity=verbosity)
+  backlightController.setBrightness(percentage=brightness)
+  return 0
   
-
+if __name__ == '__main__':
+  exit(main())
 
 
