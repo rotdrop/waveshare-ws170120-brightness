@@ -38,3 +38,9 @@ The device seemingly answers just with a standard handshake without additional d
 0030   01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
 ```
 
+## Query the current brightness
+
+At least the tools from Waveshare do not query the current setting, so
+this might not be possible, unfortunately. Of course, one can write a
+system service which maintains the state of the last set brightness
+and e.g. implement a dbus service to query and set it.
